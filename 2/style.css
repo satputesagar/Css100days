@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #3FAF82;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menu-icon {
+	width: 80px;
+	height: 60px;
+	z-index: 50;
+	cursor: pointer;
+	
+	.line-1,
+	.line-2,
+	.line-3 {
+		position: absolute;
+		width: 80px;
+		height: 8px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 0 2px 10px 0 rgbs(0, 0, 0, 0.3);
+	}
+	
+		.line-1 {
+			animation: animate-line-1 .7s forwards;
+		}
+
+		.line-2 {
+			animation: animate-line-2 .7s forwards;
+		}
+
+		.line-3 {
+			animation: animate-line-3 .7s forwards;
+		}
+	
+	&.close {
+		.line-1 {
+			animation: animate-close-line-1 .7s forwards;
+		}
+
+		.line-2 {
+			animation: animate-close-line-2 .7s forwards;
+		}
+
+		.line-3 {
+			animation: animate-close-line-3 .7s forwards;
+		}
+	}
+}
+
+@keyframes animate-close-line-1 {
+	0%{
+		transform: translateY(-20px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes animate-close-line-2 {
+	0%{
+		transform: scale(100%)
+	}
+	100%{
+		transform: scale(0%)
+	}
+}
+
+@keyframes animate-close-line-3 {
+	0%{
+		transform: translateY(20px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: rotate(135deg);
+	}
+}
+
+
+@keyframes animate-line-1 {
+	0%{
+		transform: rotate(45deg);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(-20px);
+	}
+}
+
+@keyframes animate-line-2 {
+	0%{
+		transform: scale(0)
+	}
+	100%{
+		transform: scale(1)
+	}
+}
+
+@keyframes animate-line-3 {
+	0%{
+		transform: rotate(135deg);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	100%{
+		transform: translateY(20px);
+	}
+}
